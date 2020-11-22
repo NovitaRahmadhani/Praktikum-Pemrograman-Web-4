@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat</title>
+    </head>
+    <body>
+        <style>
+            div.input-chat {
+                position: absolute;
+                top: 80%;
+                right: 0;
+                width: 200px;
+                height: 100px;
+            }
+        </style>
+        <div class="pesan" id="pesan">
+        </div>
+        <div class="input-chat">
+            <input type="text" id="input-masukan-chat" value=""/><button onclick=kirim() id="kirim">kirim</button>
+    </body>
+</html>
+<script>
+    function kirim(){
+            var msg = document.createElement("P");
+            var newChat = document.getElementById("input-masukan-chat").value;
+            console.log(newChat);
+            msg.append(newChat);
+            document.getElementById("pesan").append(msg);
+        }
+</script>
+

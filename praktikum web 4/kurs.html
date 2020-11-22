@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Konversi Mata uang</title>
+
+    <script>
+        function kurs() {
+            let input_nilai = document.getElementById("nilai").value;
+            let valas = document.getElementById("value").value;
+            let hasil_nilai;
+
+            if (valas == "a") {
+                document.getElementById("hasil").value = "Rp. " + parseFloat(input_nilai) * 9915;
+                hasil_nilai = getElementById("hasil").value;
+                console.log(hasil_nilai);
+            }
+            else if (valas == "b") {
+                document.getElementById("hasil").value = "Rp. " + parseFloat(input_nilai) * 13472;
+                hasil_nilai = getElementById("hasil").value;
+                console.log(hasil_nilai);
+            }
+            else if (valas == "c") {
+                document.getElementById("hasil").value = "Rp. " + parseFloat(input_nilai) * 874;
+                hasil_nilai = getElementById("hasil").value;
+                console.log(hasil_nilai);
+            }
+            else if (valas == "d") {
+                document.getElementById("hasil").value = "Rp. " + parseFloat(input_nilai) * 120;
+                hasil_nilai = getElementById("hasil").value;
+                console.log(hasil_nilai);
+            }
+            else if (valas == "e") {
+                document.getElementById("hasil").value = "Rp. " + parseFloat(input_nilai) * 15888;
+                hasil_nilai = getElementById("hasil").value;
+                console.log(hasil_nilai);
+            }
+            else if (valas == "f") {
+                document.getElementById("hasil").value = "Rp. " + parseFloat(input_nilai) * 3592;
+                hasil_nilai = getElementById("hasil").value;
+                console.log(hasil_nilai);
+            }
+
+        }
+    </script>
+</head>
+
+<body style="background-color: darkcyan;">
+    <table border="1" style="width: 30%" >
+        <h1 style="color: white;">Kurs Mata Uang</h1>
+         <tr>
+            <th>Masukan Nilai</th>
+            <th>Valas</th>
+            <th>Rupiah (IDR)</th>
+        </tr>
+        <tr>
+            <td><input id="nilai" type="text" placeholder="Masukan nilai"></td>
+            <td><select name="value" onclick="kurs()" id="value">
+                <option value="a">Pilih</option>
+                <option value="a">Dollar US</option>
+                <option value="b">Dollar Singapore</option>
+                <option value="c">Ringgit Malaysia</option>
+                <option value="d">Yen Jepang</option>
+                <option value="e">Euro</option>
+                <option value="f">Riyal Arab Saudi</option>
+            </select></td>
+            <td><input id="hasil" value="0" type="text" readonly></td>
+        </tr>
+    </table>
+</body>
+
+</html>
